@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair-Oil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <a href="#home" class="logo"><img src="logo1.png" alt=""></a>
+        <button class="menu-toggle" arial-label="Toggle menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#product">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>WELLNESS <span class="highlight">Hair Oil</span></h1>
+            <p>Experience the benefits of Natural Hair Care with our carefully selected ingredients and expert blends.</p>
+            <a href="#about" class="hero-button">Learn More</a>
+        </div>
+    </section>
+
+
+    <!-- <section id="home" class="hero">
+        <a href="#about" class="hero-button">Learn More</a>
+    </section> -->
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-image">
+            <img src="about2.jpg" alt="About Hair Oil">
+        </div>
+        <div class="about-info">
+            <h2><span class="about">About</span> Us</h2>
+            <p>Dr. Hira Shafique—CEO and Co-Founder of Leaf and Lock—started this journey to address common hair and skin concerns with effective, research-driven solutions. What began as a personal quest for healthier hair transformed into a trusted health and beauty brand.
+
+                At Leaf and Lock Hair Skin Care, we blend nature’s finest ingredients with scientific advancements to create products that truly work. Our formulations are backed by research, ensuring every ingredient is chosen for its proven ability to strengthen hair, boost growth, and improve overall scalp health.
+                
+                With dedication, effort, and a passion for helping others, we’ve crafted solutions that empower individuals to embrace their natural beauty. Join us on the journey to healthier, stronger, and more radiant hair—rooted in science and nature.</p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+
+     <section id="product" class="product-section">
+        <h2><span class="about">Our Product</span></h2>
+        <div class="product-container">
+            <div class="product-image">
+                <img src="product.jpeg" alt="Hair Oil">
+                <div class="discount-badge">25% OFF</div>
+            </div>
+            <div class="product-details">
+                <h3>Hair Oil</h3>
+                <ul class="rating">
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star checked"></i></li>
+                    <li><i class="fa fa-star"></i></li>
+                </ul>
+                <div class="price">
+                    <span class="old-price">1600 PKR</span>
+                    <span class="new-price">1200 PKR</span>
+                </div>
+                <button class="buy-now" onclick="location.href='#contact'">Order Now</button>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Accordion -->
+        <div class="accordion">
+            <h3>All Day Long</h3>
+            <p>Transform your hair, with our all-day hair care solutions and get the hair you've always wanted.</p>
+        </div>
+        <div class="accordion">
+            <h3>Natural</h3>
+            <p>Our oil is free of chemicals and made from 100% natural ingredients.</p>
+        </div>
+        <div class="accordion">
+            <h3>How to Use</h3>
+            <p>Apply the oil to your scalp and hair. Massage gently for 5-10 minutes and leave it overnight for the best results.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <img src="logo1.png" alt="Hair Oil Logo">
+        <p>We're here to help! Reach out to us on WhatsApp for assistance.</p>
+        <a href="https://wa.me/03476244979" target="_blank">
+            <i class="fa-3x fa-brands fa-whatsapp"></i>
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Hair Oil. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Accordion -->
+    <script>
+        // menu
+        const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    //  Accordions
+        const accordions = document.querySelectorAll('.accordion h3');
+        accordions.forEach(accordion => {
+            accordion.addEventListener('click', () => {
+                const parent = accordion.parentElement;
+                parent.classList.toggle('open');
+            });
+        });
+    </script>
+
+
+</body>
+</html>
